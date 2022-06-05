@@ -6,8 +6,8 @@
 <meta charset="ISO-8859-1">
 <title>HomepageAppSpringbootWar</title>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<spring:eval expression="@environment.getProperty('spring.mvc.view.suffix')" var="suffix" />
-<link href="../${suffix}/resources/css/index.style.css" rel="stylesheet">
+<spring:eval expression="@environment.getProperty('tomcat.contextpath')" var="contextpath" />
+<link href="../${contextpath}/resources/css/index.style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -20,7 +20,7 @@
 				<li><a href="#">Services</a></li>
 				<li><a href="#">Portfolio</a></li>
 				<li><a href="#">Contact</a></li>
-				<li><a href="#">${suffix}</a></li>
+				<li><a href="#">${contextpath}</a></li>
 			</ul>
 		</div>
 		<div class="welcome-text">
