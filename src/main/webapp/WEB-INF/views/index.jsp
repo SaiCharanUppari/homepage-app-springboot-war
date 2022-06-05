@@ -7,7 +7,7 @@
 <title>HomepageAppSpringbootWar</title>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <spring:eval expression="@environment.getProperty('spring.mvc.view.suffix')" var="suffix" />
-<link href="../resources/css/index.style.css" rel="stylesheet">
+<link href="../${suffix}/resources/css/index.style.css" rel="stylesheet">
 
 </head>
 <body>
