@@ -5,7 +5,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>HomepageAppSpringbootWar</title>
-<link href="../resources/css/index.style.css" rel="stylesheet">
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<spring:eval expression="@environment.getProperty('tomcat.contextpath')" var="contextpath" />
+<link href="../${contextpath}/resources/css/index.style.css" rel="stylesheet">
 
 </head>
 <body>
